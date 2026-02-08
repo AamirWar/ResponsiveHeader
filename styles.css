@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+/*--Header Styles--*/
+.nike-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: white;
+
+
+  .logo{
+    width: 50px;
+  }
+}
+.nike-nav{
+    display: flex;
+    gap: 28px;
+
+    a{
+      text-decoration: none;
+      color: #111;
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #111;
+        transition: all 0.3s ease;
+      }
+
+      &:hover::after{
+        width: 100%;
+      }
+    }
+  }
+
+.nike-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  .icon{
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nike-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.nike-nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px 40px;
+  border-top: 1px solid #eee;
+
+  a{
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
+/*--Article Styles--*/
+.article {
+  padding: 20px;;
+  text-align: center;
+  background: #F9F8F6;
+  
+  span{
+    font-size: 0.8em;
+  }
+  a{
+    color: darkslategray;
+    text-decoration: underline;
+  }
+}
+/*--Main Styles--*/
+/*--Poster Styles--*/
+.nike-poster {
+  
+  .poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 20px;
+  }
+}
+/*--Category Styles Flex--*/
+.category{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+
+  .category-title{
+    font-size: 1.5em;
+    padding: 10px ;
+  }
+  
+  .shop-category-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    padding: 10px;
+    cursor: pointer;
+
+    .text{
+      margin-top: 20px;
+      display: block;
+    }
+  }
+}
+/*--Featured Styles Grid--*/
+.featured-section{
+  padding: 20px;
+}
+.featured-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+
+    .featured-image{
+      width: 100%;
+      height: 100%;
+    }
+}
+/*--App Advertisement Styles--*/
+.advertisement-poster {
+  margin: 50px 0;
+  padding: 20px 0;
+  width: 100%;
+  cursor: pointer;
+
+  .advertisement-image{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+/*--Spotlight Styles--*/
+.spotlight-section{
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  .spotlight-image{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.spotlight-items{
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: none;
+  grid-template-rows: auto;
+
+  img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+hr{
+  margin: 20px;
+}
+/*--Footer Styles--*/
+.nike-footer{
+  margin: 20px;
+  .footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #061E29;
+  }
+  
+  .footer-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: space-between;
+
+     a{
+      text-decoration: none;
+      color: #061E29;
+
+      &:hover{
+        font-weight: bold;
+      }
+     }
+  }
+}
