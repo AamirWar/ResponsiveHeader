@@ -11,6 +11,8 @@
   justify-content: space-between;
   padding: 18px 40px;
   background: white;
+  position: sticky;
+  top: 0;
 
 
   .logo{
